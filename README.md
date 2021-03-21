@@ -47,19 +47,19 @@ As seguintes ferramentas foram usadas na construção do projeto:
 </a>
 
 - <a href="https://www.python.org">
-    <img alt="Django" src="https://img.shields.io/badge/Python-v3.9-blue?style=for-the-badge">
+    <img alt="Python" src="https://img.shields.io/badge/Python-v3.9-blue?style=for-the-badge">
 </a>
 
 - <a href="https://www.docker.com">
-    <img alt="Django" src="https://img.shields.io/badge/Docker_Compose-v1.28.5-blue?style=for-the-badge">
+    <img alt="Docker Compose" src="https://img.shields.io/badge/Docker_Compose-v1.28.5-blue?style=for-the-badge">
 </a>
 
 - <a href="https://www.docker.com">
-    <img alt="Django" src="https://img.shields.io/badge/Docker-v20.10-blue?style=for-the-badge">
+    <img alt="Docker" src="https://img.shields.io/badge/Docker-v20.10-blue?style=for-the-badge">
 </a>
 
 - <a href="https://www.mysql.com">
-    <img alt="Django" src="https://img.shields.io/badge/MySQL-v8.0.21-blue?style=for-the-badge">
+    <img alt="Mysql" src="https://img.shields.io/badge/MySQL-v8.0.21-blue?style=for-the-badge">
 </a>
 
 
@@ -69,7 +69,7 @@ Para executar esse pojeto você precisa de alguns pré-requisitos:
 
 ### Pré-requisitos
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Python](https://www.python.org). 
+[Git](https://git-scm.com), [Python](https://www.python.org) e [Docker](https://www.docker.com). 
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/).
 
 ### Execução
