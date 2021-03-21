@@ -32,6 +32,7 @@ Tabela de conteúdos
    * [Tecnologias](#tecnologias)
    * [Executar projeto](#executar-projeto)
         * [Pré-requisitos](#pré-requisitos)
+        * [Execução](#execução)
    * [Como usar](#como-usar)
    * [Tests](#testes)
 
@@ -40,12 +41,9 @@ Tabela de conteúdos
 ## 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
-<img src="https://simple-icons.github.io/simple-icons-website/icons/django.svg" width=10>
-- [Expo][expo]
-- [Node.js][nodejs]
-- [React][reactjs]
-- [React Native][rn]
-- [TypeScript][typescript]
+
+- <img src="https://simple-icons.github.io/simple-icons-website/icons/django.svg" width=13> [Django](https://www.djangoproject.com)
+- <img src="https://simple-icons.github.io/simple-icons-website/icons/python.svg" width=13> [Python](https://www.python.org)
 
 ## 🚀 Executar projeto
 
@@ -53,8 +51,8 @@ Para executar esse pojeto você precisa de alguns pré-requisitos
 
 ### Pré-requisitos
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Python][python]. 
-Além disto é bom ter um editor para trabalhar com o código como [VSCode][vscode].
+[Git](https://git-scm.com), [Python](https://www.python.org). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/).
 
 ### Execução
 - pip install -r requirements.txt
