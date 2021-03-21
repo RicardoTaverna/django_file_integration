@@ -95,7 +95,7 @@ $ pip install -r requirements.txt
 # Subir o banco MySQL utilizando docker
 $ docker-compose up -d
 
-# Criar as tabelas e o usuário admin no seu banco
+# Criar as tabelas e subir as informações necessárias no seu banco
 $ python manage.py makemigrations
 $ python manage.py migrate
 $ python manage.py loaddata firstdata.json
