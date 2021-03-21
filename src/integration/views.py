@@ -2,6 +2,7 @@ import csv
 from os import stat
 import requests
 
+from datetime import datetime
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from django.shortcuts import render
@@ -9,22 +10,13 @@ from integration.forms import DocumentForm
 from integration.models import Mensagem, Broker, ValidDDD, Envio
 
 def homepage(request):
-    """Controller que cria a pagina inicial."""
+    """Função que renderiza a página inicial."""
     form = DocumentForm()
     if request.method == 'POST' and 'upload-file' in request.POST:
        _save_file(request)
 
     if request.method == 'POST' and 'send-message' in request.POST:
-        mensagens = Mensagem.objects.all().filter(status='V')
-        for mensagem in mensagens:
-            broker = Broker.objects.get(operadora=mensagem.operadora)
-            envio = Envio(
-                id_mensagem=mensagem.id_mensagem,
-                numero=mensagem.numero,
-                id_broker=broker.id_broker,
-                operadora=broker.operadora
-            )
-            envio.save()
+        _send_message()
 
     context = {
         'values': Mensagem.objects.all,
@@ -55,20 +47,24 @@ def _handle_upload_file(uploaded_file):
     with open(f"static/media/documents/{uploaded_file}", 'r') as open_file:
         data = csv.reader(open_file, delimiter=',')
         for line in data:
-            status = _validate_phone(line[1], line[2])            
+            status = _validate_rules(ddd=line[1], phone=line[2], send_time=line[4], message=line[5])            
             _save_message(data=line, status=status)
 
-def _validate_phone(ddd, phone):
-    """[summary]
+def _validate_rules(ddd, phone, send_time, message):
+    """Função que valida os telefone e mensagem conforme as regras de negocio.
 
     Args:
         ddd (int): ddd enviado
         phone (int): telefone enviado
+        send_time (str): hora do envio agendada
+        message (str): mensagem enviada
     """
-    
+    valid_time = datetime.strptime("19:59:59", '%H:%M:%S').time()
+    send_time = datetime.strptime(send_time, '%H:%M:%S').time()
     valid_ddd = ValidDDD.objects.get(ddd=ddd)
     second_digit = int(str(phone[1:2]))
-    if valid_ddd.estado == 'SP':
+
+    if valid_ddd.estado == 'SP' or send_time > valid_time or len(message) > 140:
         status = 'N'
         return status
 
@@ -111,3 +107,16 @@ def _save_message(data, status):
         status=status
     )
     mensagem.save()
+
+def _send_message():
+    """Função privada que realiza o envio das mensagens."""
+    mensagens = Mensagem.objects.all().filter(status='V')
+    for mensagem in mensagens:
+        broker = Broker.objects.get(operadora=mensagem.operadora)
+        envio = Envio(
+            id_mensagem=mensagem.id_mensagem,
+            numero=mensagem.numero,
+            id_broker=broker.id_broker,
+            operadora=broker.operadora
+        )
+        envio.save()
