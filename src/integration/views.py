@@ -62,13 +62,14 @@ def _validate_rules(ddd, phone, send_time, message):
     valid_time = datetime.strptime("19:59:59", '%H:%M:%S').time()
     send_time = datetime.strptime(send_time, '%H:%M:%S').time()
     valid_ddd = ValidDDD.objects.get(ddd=ddd)
+    first_digit = int(str(phone[0:1]))
     second_digit = int(str(phone[1:2]))
 
     if valid_ddd.estado == 'SP' or send_time > valid_time or len(message) > 140:
         status = 'N'
         return status
 
-    if len(ddd) != 2 or not valid_ddd or len(phone) != 9 or second_digit <= 6:
+    if len(ddd) != 2 or not valid_ddd or len(phone) != 9 or first_digit != 9 or second_digit <= 6:
         status = 'I'
         return status
 
