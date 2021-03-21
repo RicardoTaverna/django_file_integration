@@ -92,7 +92,11 @@ $ cd src/
 # Instalar as bibliotecas para o correto funcionamento do projeto
 $ pip install -r requirements.txt
 
+<<<<<<< HEAD
 # Criar uma cópia do arquivo .env.example e salvar como
+=======
+# Criar uma cópia do arquivo .env.example e salvar como .env
+>>>>>>> f8f03cad3bb4aea346091314d0a06da093b89c15
 
 # Subir o banco MySQL utilizando docker
 $ docker-compose up -d
@@ -111,8 +115,8 @@ $ python manage.py runserver
 - você pode acessar o painel de administração e ver as tabelas e dados pré carregados [http://localhost:8000/admin](http://localhost:8000/admin) utilizando o **Usuário**:_admin_ e **Senha**:_admin_
 - fazer upload do arquivo integracao_sms.csv _(se encontra dentro da pasta onde o clone do projeto foi feito)_
     - arquivo foi criado com base nas informações disponíveis [em](https://github.com/pgmais/teste-dev).
-- a tabela _Dados da Campanha_ será carregada com as informações do arquivo, passando pelas regras de negócio disponíveis [em](https://github.com/pgmais/teste-dev).
-- ao clicar no botão enviar campanha, a tabela _Resumo de envios_ será preenchida, passando pelas regras de negócio disponíveis [em](https://github.com/pgmais/teste-dev).
+- a tabela _Dados da Campanha_ será carregada com as informações do arquivo, passando pelas regras de negócio disponíveis [em](https://github.com/pgmais/teste-dev#regras).
+- ao clicar no botão enviar campanha, a tabela _Resumo de envios_ será preenchida, passando pelas regras de negócio disponíveis [em](https://github.com/pgmais/teste-dev#regras).
 
 
 ## 🧭 Testes
