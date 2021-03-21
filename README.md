@@ -24,19 +24,19 @@
 </p>
 
 
-Tabela de conteúdos
-=================
-<!--ts-->
-   * [Sobre](#Sobre)
-   * [Tabela de Conteudo](#tabela-de-conteudo)
-   * [Tecnologias](#tecnologias)
-   * [Executar projeto](#executar-projeto)
-        * [Pré-requisitos](#pré-requisitos)
-        * [Execução](#execução)
-   * [Como usar](#como-usar)
-   * [Tests](#testes)
+## 💻 Tabela de conteúdos
 
-<!--te-->
+
+* [Sobre](#Sobre)
+* [Tabela de Conteudo](#tabela-de-conteudo)
+* [Tecnologias](#tecnologias)
+* [Executar projeto](#executar-projeto)
+    * [Pré-requisitos](#pré-requisitos)
+    * [Execução](#execução)
+* [Como usar](#como-usar)
+* [Tests](#testes)
+
+
 
 ## 🛠 Tecnologias
 
@@ -65,7 +65,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ## 🚀 Executar projeto
 
-Para executar esse pojeto você precisa de alguns pré-requisitos
+Para executar esse pojeto você precisa de alguns pré-requisitos:
 
 ### Pré-requisitos
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
@@ -73,13 +73,44 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/).
 
 ### Execução
-- pip install -r requirements.txt
-- cd src
-- docker-compose up -d
-- python manage.py makemigrations
-- python manage.py migrate
-- python manage.py loaddata firstdata.json
-- python manage.py runserver
+```bash
+# clonar o repositório 
+$ git clone https://github.com/RicardoTaverna/django_file_integration.git
+
+# Criar um ambiente virtual
+$ virtualenv .venv
+
+# Ativar o ambiente virtual
+# windows
+$ .venv\Scripts\activate
+# Linux
+$ source .venv/bin/activate
+
+# mudar para a pasta src do projeto
+$ cd src/
+
+# Instalar as bibliotecas para o correto funcionamento do projeto
+$ pip install -r requirements.txt
+
+# Subir o banco MySQL utilizando docker
+$ docker-compose up -d
+
+# Criar as tabelas e o usuário admin no seu banco
+$ python manage.py makemigrations
+$ python manage.py migrate
+$ python manage.py loaddata firstdata.json
+
+# Executar a aplicação em abiente dev
+$ python manage.py runserver
+
+# o servidor iniciará na porta:8000 - acesse http://localhost:8000
+```
+- acessar [http://localhost:8000](http://localhost:8000)
+- você pode acessar o painel de administração e ver as tabelas e dados pré carregados [http://localhost:8000/admin](http://localhost:8000/admin) utilizando o **Usuário**:_admin_ e **Senha**:_admin_
+- fazer upload do arquivo integracao_sms.csv _(se encontra dentro da pasta onde o clone do projeto foi feito)_
+- a tabela _Dados da Campanha_ será carregada com as informações do arquivo, passando pelas regras de negócio
+- ao clicar no botão enviar campanha, a tabela _Resumo de envios_ será preenchida, passando pelas regras de negócio
+
 
 ## Testes
 - coverage run --source='.' manage.py test integration
