@@ -92,6 +92,8 @@ $ cd src/
 # Instalar as bibliotecas para o correto funcionamento do projeto
 $ pip install -r requirements.txt
 
+# Criar uma cópia do arquivo .env.example e salvar como
+
 # Subir o banco MySQL utilizando docker
 $ docker-compose up -d
 
