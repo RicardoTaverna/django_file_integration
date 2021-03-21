@@ -1,0 +1,312 @@
+[
+	{
+		"model": "integration.broker",
+		"pk": 1,
+		"fields": {
+			"id_broker": 1,
+			"operadora": "VIVO"
+		}
+	},
+	{
+		"model": "integration.broker",
+		"pk": 2,
+		"fields": {
+			"id_broker": 1,
+			"operadora": "TIM"
+		}
+	},
+	{
+		"model": "integration.broker",
+		"pk": 3,
+		"fields": {
+			"id_broker": 2,
+			"operadora": "CLARO"
+		}
+	},
+	{
+		"model": "integration.broker",
+		"pk": 4,
+		"fields": {
+			"id_broker": 2,
+			"operadora": "OI"
+		}
+	},
+	{
+		"model": "integration.broker",
+		"pk": 5,
+		"fields": {
+			"id_broker": 3,
+			"operadora": "NEXTEL"
+		}
+	},
+    {
+      "model": "integration.validddd",
+      "pk": 1,
+      "fields": {
+        "ddd": 11,
+        "cidade": "São Paulo",
+        "estado": "SP"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 2,
+      "fields": {
+        "ddd": 12,
+        "cidade": "São José dos Campos",
+        "estado": "SP"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 3,
+      "fields": {
+        "ddd": 13,
+        "cidade": "Santos",
+        "estado": "SP"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 4,
+      "fields": {
+        "ddd": 14,
+        "cidade": "Bauru",
+        "estado": "SP"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 5,
+      "fields": {
+        "ddd": 15,
+        "cidade": "Sorocaba",
+        "estado": "SP"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 6,
+      "fields": {
+        "ddd": 16,
+        "cidade": "Ribeirão Preto",
+        "estado": "SP"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 7,
+      "fields": {
+        "ddd": 17,
+        "cidade": "São José dos Campos",
+        "estado": "SP"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 8,
+      "fields": {
+        "ddd": 18,
+        "cidade": "Presidente Prudente",
+        "estado": "SP"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 9,
+      "fields": {
+        "ddd": 19,
+        "cidade": "Campinas ",
+        "estado": "SP"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 10,
+      "fields": {
+        "ddd": 21,
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 11,
+      "fields": {
+        "ddd": 22,
+        "cidade": "Campos dos Goytacazes",
+        "estado": "RJ"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 12,
+      "fields": {
+        "ddd": 24,
+        "cidade": "Volta Redonda",
+        "estado": "RJ"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 13,
+      "fields": {
+        "ddd": 27,
+        "cidade": "Vila Velha/Vitória",
+        "estado": "ES"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 14,
+      "fields": {
+        "ddd": 28,
+        "cidade": "Cachoeiro de Itapemirim",
+        "estado": "ES"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 15,
+      "fields": {
+        "ddd": 31,
+        "cidade": "Belo Horizonte",
+        "estado": "MG"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 16,
+      "fields": {
+        "ddd": 32,
+        "cidade": "Juiz de Fora",
+        "estado": "MG"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 17,
+      "fields": {
+        "ddd": 33,
+        "cidade": "Governador Valadares",
+        "estado": "MG"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 18,
+      "fields": {
+        "ddd": 34,
+        "cidade": "Uberlândia",
+        "estado": "MG"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 19,
+      "fields": {
+        "ddd": 35,
+        "cidade": "Poços de Caldas",
+        "estado": "MG"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 20,
+      "fields": {
+        "ddd": 37,
+        "cidade": "Divinópolis",
+        "estado": "MG"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 21,
+      "fields": {
+        "ddd": 38,
+        "cidade": "Montes Claros",
+        "estado": "MG"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 22,
+      "fields": {
+        "ddd": 41,
+        "cidade": "Curitiba",
+        "estado": "PR"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 23,
+      "fields": {
+        "ddd": 42,
+        "cidade": "Ponta Grossa",
+        "estado": "PR"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 24,
+      "fields": {
+        "ddd": 43,
+        "cidade": "Londrina",
+        "estado": "PR"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 25,
+      "fields": {
+        "ddd": 44,
+        "cidade": "Maringá",
+        "estado": "PR"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 26,
+      "fields": {
+        "ddd": 45,
+        "cidade": "Foz do Iguaçú",
+        "estado": "PR"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 27,
+      "fields": {
+        "ddd": 46,
+        "cidade": "Francisco Beltrão/Pato Branco",
+        "estado": "PR"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 28,
+      "fields": {
+        "ddd": 47,
+        "cidade": "Joinville",
+        "estado": "SC"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 29,
+      "fields": {
+        "ddd": 48,
+        "cidade": "Florianópolis",
+        "estado": "SC"
+      }
+    },
+    {
+      "model": "integration.validddd",
+      "pk": 30,
+      "fields": {
+        "ddd": 49,
+        "cidade": "Chapecó",
+        "estado": "SC"
+      }
+    }
+]
