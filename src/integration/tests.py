@@ -1,31 +1,21 @@
 from django.test import TestCase
-from integration.models import Mensagem, Broker, ValidDDD, Envio
 from integration.views import _validate_phone, _check_blacklist
 
 # Create your tests here.
-class ModelTestCase(TestCase):
-    def setup(self):
-        Mensagem.objects.create(
-            id_mensagem="asdf-dffg-ewr-123dfg",
-            ddd=55,
-            numero=999100389,
-            operadora="TESTE",
-            hora_envio="19:45:20",
-            mensagem="mensagem de teste",
-            status="V"
-        )
-        Broker.objects.create(
-            id_broker=4,
-            operadora="TESTE"
-        )
-        ValidDDD.objects.create(
-            ddd=55,
-            cidade="cidade de teste",
-            estado="TS"
-        )
+class ViewTestCase(TestCase):
     
-    def test_created_message(self):
+    def test_validate_phone_success(self):
         """Testa se uma mensagem foi criada com sucesso."""
+        ddd = 41
+        phone = 999100389
+        send_time = "18:45:25"
+        message = "dui luctus rutrum nulla tellus in sagittis dui"
+        status = _validate_phone(
+            ddd=ddd,
+            phone=phone,
+            send_time=send_time,
+            
+        )
         message = Mensagem.objects.get(id_mensagem="asdf-dffg-ewr-123dfg")
         status = message.status
         self.assertEqual(status, 'V')
