@@ -1,4 +1,15 @@
 [
+  {
+		"model": "auth.user",
+		"pk": 1,
+		"fields": {
+			"username": "admin",
+			"password": "pbkdf2_sha256$216000$UQswJoAAuq8w$2zDYIQPSKahW6uq321KeKhr4/JZk0ZugWar4tuRHkDI=",
+      "is_superuser": true,
+      "is_staff": true,
+      "is_active": true
+		}
+	},
 	{
 		"model": "integration.broker",
 		"pk": 1,
