@@ -42,8 +42,26 @@ Tabela de conteúdos
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-- <img src="https://simple-icons.github.io/simple-icons-website/icons/django.svg" width=13> [Django](https://www.djangoproject.com)
-- <img src="https://simple-icons.github.io/simple-icons-website/icons/python.svg" width=13> [Python](https://www.python.org)
+- <a href="https://www.djangoproject.com">
+    <img alt="Django" src="https://img.shields.io/badge/Django-v3.1-blue?style=for-the-badge">
+</a>
+
+- <a href="https://www.python.org">
+    <img alt="Django" src="https://img.shields.io/badge/Python-v3.9-blue?style=for-the-badge">
+</a>
+
+- <a href="https://www.docker.com">
+    <img alt="Django" src="https://img.shields.io/badge/Docker_Compose-v1.28.5-blue?style=for-the-badge">
+</a>
+
+- <a href="https://www.docker.com">
+    <img alt="Django" src="https://img.shields.io/badge/Docker-v20.10-blue?style=for-the-badge">
+</a>
+
+- <a href="https://www.mysql.com">
+    <img alt="Django" src="https://img.shields.io/badge/MySQL-v8.0.21-blue?style=for-the-badge">
+</a>
+
 
 ## 🚀 Executar projeto
 
