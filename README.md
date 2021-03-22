@@ -33,8 +33,9 @@
 * [Executar projeto](#executar-projeto)
     * [Pré-requisitos](#pré-requisitos)
     * [Execução](#execução)
-* [Como usar](#como-usar)
 * [Tests](#testes)
+* [Caminhos Importantes](#caminhos-importantes)
+* [Licença](#licença)
 
 
 
