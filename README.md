@@ -39,6 +39,15 @@
 
 
 ## 🛠 Tecnologias
+O padrão de projeto utilizado é o MTV, análogo ao MVC, porém adaptado pela equipe do Django.
+
+| M | Model    | Model      | M |
+|---|----------|------------|---|
+| T | Template | View       | V |
+| V | View     | Controller | C |
+
+São criados domínios para os diferentes 'apps', ao criar o projeto, foi criado o domínio app, que contém todos os arquivos de configuração.
+Na sequência foi criado o domínio 'integration', que contém as models, views, urls, tests referentes a esse domínio.
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
@@ -125,14 +134,15 @@ $ coverage report
 ```
 
 ## 💡 Caminhos Importantes
+
 As regras de negócio você encontra no seguinte caminho:
-- src
-    - integration
+- src/
+    - integration/
         - views.py
 
 Os testes unitários você encontra no seguinte caminho:
-- src
-    - integration
+- src/
+    - integration/
         - views.py
 
 ## 📝 Licença
