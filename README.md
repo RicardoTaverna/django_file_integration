@@ -92,11 +92,7 @@ $ cd src/
 # Instalar as bibliotecas para o correto funcionamento do projeto
 $ pip install -r requirements.txt
 
-<<<<<<< HEAD
 # Criar uma cópia do arquivo .env.example e salvar como
-=======
-# Criar uma cópia do arquivo .env.example e salvar como .env
->>>>>>> f8f03cad3bb4aea346091314d0a06da093b89c15
 
 # Subir o banco MySQL utilizando docker
 $ docker-compose up -d
@@ -120,9 +116,24 @@ $ python manage.py runserver
 
 
 ## 🧭 Testes
-- coverage run --source='.' manage.py test integration
-- coverage report
+```bash
+# Para rodar os teste unitarios, utilize o comando abaixo
+$ coverage run --source='.' manage.py test integration --keepdb
 
+# Para ver o report do coverage, utilize o comando abaixo
+$ coverage report
+```
+
+## 💡 Caminhos Importantes
+As regras de negócio você encontra no seguinte caminho:
+- src
+    - integration
+        - views.py
+
+Os testes unitários você encontra no seguinte caminho:
+- src
+    - integration
+        - views.py
 
 ## 📝 Licença
 
