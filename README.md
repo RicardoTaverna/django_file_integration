@@ -143,7 +143,7 @@ As regras de negócio você encontra no seguinte caminho:
 Os testes unitários você encontra no seguinte caminho:
 - src/
     - integration/
-        - views.py
+        - tests.py
 
 ## 📝 Licença
 
