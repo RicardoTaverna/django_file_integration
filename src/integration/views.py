@@ -1,5 +1,5 @@
 import csv
-from os import stat
+from os import scandir, stat
 import requests
 
 from datetime import datetime
@@ -13,7 +13,7 @@ def homepage(request):
     """Função que renderiza a página inicial."""
     form = DocumentForm()
     if request.method == 'POST' and 'upload-file' in request.POST:
-       _save_file(request)
+        _save_file(request)
 
     if request.method == 'POST' and 'send-message' in request.POST:
         _send_message()
@@ -61,23 +61,29 @@ def _validate_rules(ddd, phone, send_time, message):
     """
     valid_time = datetime.strptime("19:59:59", '%H:%M:%S').time()
     send_time = datetime.strptime(send_time, '%H:%M:%S').time()
-    valid_ddd = ValidDDD.objects.get(ddd=ddd)
-    first_digit = int(str(phone[0:1]))
-    second_digit = int(str(phone[1:2]))
+    valid_ddd = ValidDDD.objects.filter(ddd=ddd)
+    first_digit = str(phone)
+    first_digit = first_digit[0:1]
+    second_digit = str(phone)
+    second_digit = second_digit[1:2]
 
-    if valid_ddd.estado == 'SP' or send_time > valid_time or len(message) > 140:
-        status = 'N'
+    if len(str(ddd)) != 2 or len(valid_ddd) < 1:
+        status = 'Inválido'
         return status
 
-    if len(ddd) != 2 or not valid_ddd or len(phone) != 9 or first_digit != 9 or second_digit <= 6:
-        status = 'I'
+    if valid_ddd[0].estado == 'SP' or send_time > valid_time or len(message) > 140:
+        status = 'Não Permitido'
+        return status
+
+    if len(str(phone)) != 9 or int(first_digit) != 9 or int(second_digit) <= 6:
+        status = 'Inválido'
         return status
 
     if _check_blacklist(ddd=ddd, phone=phone) == 200:
-        status = 'B'
+        status = 'Blacklist'
         return status
 
-    status = 'V'
+    status = 'Valido'
     return status
 
 def _check_blacklist(ddd, phone):
@@ -111,9 +117,11 @@ def _save_message(data, status):
 
 def _send_message():
     """Função privada que realiza o envio das mensagens."""
-    mensagens = Mensagem.objects.all().filter(status='V')
+    mensagens = Mensagem.objects.all().filter(status='Valido')
+    print(mensagens)
     for mensagem in mensagens:
         broker = Broker.objects.get(operadora=mensagem.operadora)
+        print('passei aqui')
         envio = Envio(
             id_mensagem=mensagem.id_mensagem,
             numero=mensagem.numero,

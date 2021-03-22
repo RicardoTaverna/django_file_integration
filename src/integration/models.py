@@ -10,10 +10,10 @@ class Documento(models.Model):
 class Mensagem(models.Model):
     """Model com os mesmos campos do arquivo de entrada."""
     STATUS_MENSAGEM = (
-        ('B', 'Blacklist'),
-        ('I', 'Inválido'),
-        ('V', 'Valido'),
-        ('N', 'NÃO PERMITIDO')
+        ('Blacklist', 'Blacklist'),
+        ('Inválido', 'Inválido'),
+        ('Valido', 'Valido'),
+        ('Não Permitido', 'Não Permitido')
     )
 
     id_mensagem = models.CharField(max_length=50, blank=True, null=True)
@@ -22,7 +22,7 @@ class Mensagem(models.Model):
     operadora = models.CharField(max_length=50, blank=True, null=True)
     hora_envio = models.CharField(max_length=20, blank=True, null=True)
     mensagem = models.CharField(max_length=140, blank=True, null=True)
-    status = models.CharField(max_length=3, choices=STATUS_MENSAGEM, blank=True, null=True)
+    status = models.CharField(max_length=30, choices=STATUS_MENSAGEM, blank=True, null=True)
 
     def __str__(self):
         """função para sobreescrever o nome apresentado na tela de admin."""
