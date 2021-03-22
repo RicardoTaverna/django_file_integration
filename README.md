@@ -67,8 +67,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
     <img alt="Docker" src="https://img.shields.io/badge/Docker-v20.10-blue?style=for-the-badge">
 </a>
 
-- <a href="https://www.mysql.com">
-    <img alt="Mysql" src="https://img.shields.io/badge/MySQL-v8.0.21-blue?style=for-the-badge">
+- <a href="https://www.postgresql.org/">
+    <img alt="Mysql" src="https://img.shields.io/badge/PostgreSQL-v13.2-blue?style=for-the-badge">
 </a>
 
 
